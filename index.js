@@ -3,7 +3,7 @@ var moment = require('moment');
 
 exports.handler = (event, context, callback) => {
 
-    var originURL = '*';
+    var originURL = process.env.ORIGIN_URL || '*';
 
     emitLambdaAge();
 
